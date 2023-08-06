@@ -1,5 +1,5 @@
 This repository contains my personal scripts for daily usage.
-To obtain a specifc one, you may use `wget`
+To obtain a specifc one, you may use  `curl -o <filename> <raw-link-to-file>`
 
 Name | Description
 ---|---
