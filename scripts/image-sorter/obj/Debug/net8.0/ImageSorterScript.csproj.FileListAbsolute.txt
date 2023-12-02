@@ -1,0 +1,17 @@
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ImageSorterScript
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ImageSorterScript.deps.json
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ImageSorterScript.runtimeconfig.json
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ImageSorterScript.dll
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ImageSorterScript.pdb
+/home/tim/Repo/ImageSorterScript/bin/Debug/net8.0/ExifLibrary.dll
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.csproj.AssemblyReference.cache
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.GeneratedMSBuildEditorConfig.editorconfig
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.AssemblyInfoInputs.cache
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.AssemblyInfo.cs
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.csproj.CoreCompileInputs.cache
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.csproj.CopyComplete
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.dll
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/refint/ImageSorterScript.dll
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.pdb
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ImageSorterScript.genruntimeconfig.cache
+/home/tim/Repo/ImageSorterScript/obj/Debug/net8.0/ref/ImageSorterScript.dll
