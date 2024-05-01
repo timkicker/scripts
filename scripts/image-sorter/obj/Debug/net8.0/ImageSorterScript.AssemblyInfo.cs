@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImageSorterScript")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae6f563c4082be05e0c021862b613d7c1d037e1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImageSorterScript")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImageSorterScript")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

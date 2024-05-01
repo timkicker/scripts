@@ -4587,26 +4587,25 @@
     ]
   },
   "packageFolders": {
-    "/home/tim/.nuget/packages/": {}
+    "/home/freeman/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tim/Repo/ImageSorterScript/ImageSorterScript.csproj",
+      "projectUniqueName": "/home/freeman/repo/scripts/scripts/image-sorter/ImageSorterScript.csproj",
       "projectName": "ImageSorterScript",
-      "projectPath": "/home/tim/Repo/ImageSorterScript/ImageSorterScript.csproj",
-      "packagesPath": "/home/tim/.nuget/packages/",
-      "outputPath": "/home/tim/Repo/ImageSorterScript/obj/",
+      "projectPath": "/home/freeman/repo/scripts/scripts/image-sorter/ImageSorterScript.csproj",
+      "packagesPath": "/home/freeman/.nuget/packages/",
+      "outputPath": "/home/freeman/repo/scripts/scripts/image-sorter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/tim/.nuget/NuGet/NuGet.Config"
+        "/home/freeman/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/panandzoom-nightly/api/v2": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -4640,12 +4639,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.4, 8.0.4]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/tim/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

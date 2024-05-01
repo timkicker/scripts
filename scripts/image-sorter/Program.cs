@@ -12,7 +12,7 @@ namespace ImageSort
         static void Main(string[] args)
         {
             // change this path
-            string path = @"/home/tim/Pictures/Phoneimages/Camera";
+            string path = @"/home/freeman/Pictures/DCIM";
             string[] files = Directory.GetFiles(path);
 
             int i = 0;
