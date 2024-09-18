@@ -2,21 +2,12 @@ import sqlite3
 import pandas as pd
 from tqdm import tqdm
 
-# Connect to the SQLite database
-conn = sqlite3.connect('malojadb.sqlite')
-
-# Load data into a Pandas DataFrame
-df = pd.read_sql_query("SELECT timestamp, track_id FROM scrobbles", conn)
-
-# Convert timestamp to datetime and sort
-df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
-df = df.sort_values('timestamp')
-
-def find_repetitions(df, min_repetitions=10):
+def find_repetitions(df, tracks_df, min_repetitions=10):
     """Finds instances where a track is played more than a certain number of times consecutively.
 
     Args:
         df: A Pandas DataFrame containing the scrobbles data.
+        tracks_df: A Pandas DataFrame containing the track metadata.
         min_repetitions: The minimum number of consecutive plays for a repetition to be counted.
 
     Returns:
@@ -27,6 +18,7 @@ def find_repetitions(df, min_repetitions=10):
             - count: The number of times the track was repeated.
             - start_unix: The start timestamp of the repetition as a Unix timestamp.
             - end_unix: The end timestamp of the repetition as a Unix timestamp.
+            - track_title: The title of the repeated track.
     """
 
     repetitions = []
@@ -44,13 +36,27 @@ def find_repetitions(df, min_repetitions=10):
             count = 1
             start_time = row['timestamp']
 
-    return repetitions
+    # Join with track titles
+    df_result = pd.DataFrame(repetitions)
+    df_result = df_result.merge(tracks_df, left_on='track_id', right_on='id', how='left')
+
+    return df_result
+
+# Connect to the SQLite database
+conn = sqlite3.connect('malojadb.sqlite')
+
+# Load data into Pandas DataFrames
+df_scrobbles = pd.read_sql_query("SELECT timestamp, track_id FROM scrobbles", conn)
+df_tracks = pd.read_sql_query("SELECT id, title FROM tracks", conn)
+
+# Convert timestamp to datetime and sort
+df_scrobbles['timestamp'] = pd.to_datetime(df_scrobbles['timestamp'], unit='s')
+df_scrobbles = df_scrobbles.sort_values('timestamp')
 
 # Find repetitions
-result = find_repetitions(df)
+repetitions = find_repetitions(df_scrobbles, df_tracks)
 
 # Save results to a CSV file
-df_result = pd.DataFrame(result)
-df_result.to_csv('repetitions_with_timestamps.csv', index=False)
+repetitions.to_csv('repetitions_with_timestamps.csv', index=False)
 
 print("Results saved to 'repetitions_with_timestamps.csv'")
